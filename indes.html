@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Production Meta Tag Suite -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Project NEXUS: High-performance, serverless computer science operating core suite by RikMakersHQ. Visualizing compiler syntax, instruction sets, cryptographic block layers, and cluster allocation arrays.">
+    <meta name="keywords" content="RikMakersHQ, NEXUS, Compiler Design, Abstract Syntax Tree, Virtual CPU, 8-Bit Emulator, Blockchain Ledger Core, Sector Allocation, Serverless Architecture">
+    <meta name="author" content="RikMakersHQ">
+
+    <!-- Open Graph (OG) Protocol Configurations for Devpost/WhatsApp Links -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RikMakersHQ // PROJECT NEXUS Engine Suite">
+    <meta property="og:description" content="Ingest, tokenize, emulate, and manage physical storage paging layers natively in browser volatile memory loops for ₹0.00 infrastructure.">
+    <meta property="og:site_name" content="RikMakersHQ Ecosystem">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>RikMakersHQ // PROJECT NEXUS Operating Core Simulator</title>
+    
+    <!-- Import Isolated External System Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Corporate Brand Header Frame -->
+    <header class="brand-header">
+        <div class="brand-logo">RikMakersHQ // PROJECT NEXUS</div>
+        <div class="system-badge">HOSTING: WEB ENVIRONMENT [₹0.00]</div>
+    </header>
+
+    <!-- Tab Navigator Link Bar Router -->
+    <nav class="nav-tabs-container">
+        <div id="tab-syntax" class="nav-tab active-route" onclick="switchNexusRoute('syntax')">// NEXUS.TITAN</div>
+        <div id="tab-emulate" class="nav-tab" onclick="switchNexusRoute('emulate')">// NEXUS.VALKYRIE</div>
+        <div id="tab-cipher" class="nav-tab" onclick="switchNexusRoute('cipher')">// NEXUS.AEGIS</div>
+        <div id="tab-sector" class="nav-tab" onclick="switchNexusRoute('sector')">// NEXUS.VORTEX</div>
+    </nav>
+
+    <!-- Master Application Viewport -->
+    <main class="nexus-viewport-view">
+
+        <!-- MODULE 1: NEXUS.TITAN (Polyglot Lexer & AST Parser Engine) -->
+        <div id="view-syntax" class="route-view-panel active-panel split-grid-3">
+            <div class="panel-container">
+                <div class="panel-title-bar">
+                    <span>Source Character Stream Input</span>
+                    <select id="langSelector" class="lang-select">
+                        <option value="rust">Rust (.rs)</option>
+                        <option value="cpp">C++ (.cpp)</option>
+                        <option value="go">Go (.go)</option>
+                    </select>
+                </div>
+                <textarea id="syntaxInput" class="terminal-box" placeholder="// Write code here to map tree tokens...&#10;let mut allocation_bound = 1024;"></textarea>
+                <button class="action-btn" id="btn-titan">Run Lexical Analysis</button>
+            </div>
+            <div class="panel-container">
+                <div class="panel-title-bar">Abstract Syntax Tree (AST) Hierarchical Tree</div>
+                <div id="syntaxCanvas" class="canvas-area">
+                    <div class="status-placeholder">[System Cache]: Awaiting parse passes...</div>
+                </div>
+            </div>
+            <div class="panel-container">
+                <div class="panel-title-bar">Lexer Telemetry & Compiler Shields</div>
+                <div id="syntaxLogs" class="log-area">[Telemetry Matrix]: System standby.</div>
+            </div>
+        </div>
+
+        <!-- MODULE 2: NEXUS.VALKYRIE (Virtual Instruction CPU & Register Emulator) -->
+        <div id="view-emulate" class="route-view-panel split-grid-3">
+            <div class="panel-container">
+                <div class="panel-title-bar">ISA Instruction Stream Input</div>
+                <textarea id="cpuInput" class="terminal-box" placeholder="; Write primitive Assembly routines here...&#10;MOV AX 255&#10;ADD AX 45&#10;MOV BX AX"></textarea>
+                <button class="action-btn" id="btn-valkyrie">Execute ISA Engine</button>
+            </div>
+            <div class="panel-container">
+                <div class="panel-title-bar">Machine State Registry Monitor</div>
+                <div id="cpuCanvas" class="canvas-area">
+                    <div class="cpu-reg-slot"><span>Register AX:</span><span id="reg-AX">0x0000</span></div>
+                    <div class="cpu-reg-slot"><span>Register BX:</span><span id="reg-BX">0x0000</span></div>
+                    <div class="cpu-reg-slot"><span>Register CX:</span><span id="reg-CX">0x0000</span></div>
+                    <div class="cpu-reg-slot"><span>Register DX:</span><span id="reg-DX">0x0000</span></div>
+                </div>
+            </div>
+            <div class="panel-container">
+                <div class="panel-title-bar">Execution Step Trace Logs</div>
+                <div id="cpuLogs" class="log-area">[Valkyrie Log]: Thread uninitialized.</div>
+            </div>
+        </div>
+
+        <!-- MODULE 3: NEXUS.AEGIS (Decentralized SHA-256 Ledger Miner Replica) -->
+        <div id="view-cipher" class="route-view-panel split-grid-3">
+            <div class="panel-container">
+                <div class="panel-title-bar">Transaction Block Data Payload Input</div>
+                <textarea id="ledgerInput" class="terminal-box" placeholder='{ "origin": "RikMakersHQ", "payload": "Verified Asset Block #01" }'></textarea>
+                <button class="action-btn" id="btn-aegis">Mine Cryptographic Block</button>
+            </div>
+            <div class="panel-container">
+                <div class="panel-title-bar">Immutable Hash-Linked Node Chain Grid</div>
+                <div id="ledgerCanvas" class="canvas-area" style="overflow-y: auto;">
+                    <div class="status-placeholder">[Ledger Cache]: Genesis root node waiting.</div>
+                </div>
+            </div>
+            <div class="panel-container">
+                <div class="panel-title-bar">Proof-of-Work Telemetry Log Monitor</div>
+                <div id="ledgerLogs" class="log-area">[Aegis Ledger]: Hash engines standing by...</div>
+            </div>
+        </div>
+
+        <!-- MODULE 4: NEXUS.VORTEX (OS Local Cluster Storage Paging Simulator) -->
+        <div id="view-sector" class="route-view-panel split-grid-3">
+            <div class="panel-container">
+                <div class="panel-title-bar">Storage Allocation Commands Input</div>
+                <textarea id="storageInput" class="terminal-box" placeholder="allocate file_alpha.rs 12&#10;allocate test_payload.bin 24"></textarea>
+                <button class="action-btn" id="btn-vortex">Commit Allocation Pipeline</button>
+            </div>
+            <div class="panel-container">
+                <div class="panel-title-bar">Physical Storage Sector Cluster Allocation Matrix Map</div>
+                <div class="canvas-area">
+                    <div id="storageCanvas" class="storage-sector-grid">
+                        <!-- Hardware clusters populated dynamically via external scripts -->
+                    </div>
+                </div>
+            </div>
+            <div class="panel-container">
+                <div class="panel-title-bar">FAT16 Node Index Table Metrics</div>
+                <div id="storageLogs" class="log-area">[Vortex Virtualizer]: Data registers sanitized. Ready to map blocks.</div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Core Decoupled Pipeline Scripts -->
+    <script src="core/main_router.js"></script>
+    <script src="core/nexus_titan.js"></script>
+    <script src="core/nexus_valkyrie.js"></script>
+    <script src="core/nexus_aegis.js"></script>
+    <script src="core/nexus_vortex.js"></script>
+</body>
+</html>
