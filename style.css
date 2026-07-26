@@ -1,0 +1,230 @@
+/* style.css // RikMakersHQ // PROJECT NEXUS Core UI System Sheet */
+
+:root {
+    --bg-primary: #ffffff;
+    --border-color: #e5e7eb;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --accent-matrix: #10b981;
+    --accent-crimson: #ef4444;
+    --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; 
+    background-color: var(--bg-primary); 
+    color: var(--text-main); 
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+/* Global Corporate Header Bar */
+.brand-header { 
+    height: 48px; 
+    border-bottom: 1px solid var(--border-color); 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 24px; 
+    background: #ffffff; 
+}
+
+.brand-logo { 
+    font-family: var(--font-mono); 
+    font-weight: 700; 
+    letter-spacing: -0.05em; 
+    font-size: 14px; 
+}
+
+/* AETHERIX Style Tab Navigator System Bar */
+.nav-tabs-container { 
+    display: flex; 
+    height: 36px; 
+    border-bottom: 1px solid var(--border-color); 
+    background: #fafafa; 
+    padding: 0 16px; 
+}
+
+.nav-tab { 
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    padding: 0 16px; 
+    font-family: var(--font-mono); 
+    font-size: 11px; 
+    text-transform: uppercase; 
+    color: var(--text-muted); 
+    cursor: pointer; 
+    border-right: 1px solid var(--border-color); 
+    border-bottom: 2px solid transparent; 
+    transition: all 0.15s ease; 
+}
+
+.nav-tab:hover { 
+    background: #f3f4f6; 
+    color: var(--text-main); 
+}
+
+.nav-tab.active-route { 
+    background: #ffffff; 
+    color: var(--text-main); 
+    border-bottom-color: var(--text-main); 
+    font-weight: 600; 
+}
+
+/* Primary Workspace Viewport Container */
+.nexus-viewport-view { 
+    height: calc(100vh - 84px); 
+    width: 100%; 
+    padding: 20px; 
+    overflow: hidden; 
+    background: #ffffff; 
+}
+
+.route-view-panel { 
+    display: none; 
+    height: 100%; 
+    width: 100%; 
+}
+
+.route-view-panel.active-panel { 
+    display: grid; 
+}
+
+/* General Triple Split Framework Styling */
+.split-grid-3 { 
+    grid-template-columns: 320px 1fr 340px; 
+    gap: 16px; 
+    height: 100%; 
+}
+
+.panel-container { 
+    border: 1px solid var(--border-color); 
+    display: flex; 
+    flex-direction: column; 
+    background: #ffffff; 
+    overflow: hidden; 
+}
+
+.panel-title-bar { 
+    height: 34px; 
+    border-bottom: 1px solid var(--border-color); 
+    background: #fafafa; 
+    display: flex; 
+    align-items: center; 
+    padding: 0 12px; 
+    font-family: var(--font-mono); 
+    font-size: 10px; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    color: var(--text-muted); 
+}
+
+/* Interactive Component Hooks */
+.terminal-box { 
+    flex: 1; 
+    border: none; 
+    outline: none; 
+    background: #fffffb; 
+    font-family: var(--font-mono); 
+    font-size: 12px; 
+    padding: 12px; 
+    resize: none; 
+    border-bottom: 1px solid var(--border-color); 
+}
+
+.canvas-area { 
+    flex: 1; 
+    overflow: auto; 
+    padding: 16px; 
+    background: #ffffff; 
+}
+
+.log-area { 
+    flex: 1; 
+    overflow-y: auto; 
+    padding: 12px; 
+    font-family: var(--font-mono); 
+    font-size: 11px; 
+    background: #fafafa; 
+    line-height: 1.6; 
+}
+
+/* Control Action Buttons */
+.action-btn { 
+    background: var(--text-main); 
+    color: #ffffff; 
+    border: none; 
+    font-family: var(--font-mono); 
+    font-size: 10px; 
+    text-transform: uppercase; 
+    padding: 6px 12px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    margin: 8px; 
+    display: inline-block; 
+    width: calc(100% - 16px); 
+    text-align: center; 
+}
+
+.action-btn:hover { 
+    background: #374151; 
+}
+
+/* Module Specific Components */
+.token-row { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 4px 0; 
+    border-bottom: 1px dashed var(--border-color); 
+}
+
+.cpu-reg-slot { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 8px; 
+    border: 1px solid var(--border-color); 
+    margin-bottom: 8px; 
+    font-family: var(--font-mono); 
+    font-size: 12px; 
+}
+
+.crypto-block { 
+    border: 1px solid var(--border-color); 
+    padding: 12px; 
+    margin-bottom: 12px; 
+    background: #fefefe; 
+}
+
+.storage-sector-grid { 
+    display: grid; 
+    grid-template-columns: repeat(8, 1fr); 
+    gap: 6px; 
+    width: 100%; 
+    height: 100%; 
+    max-height: 240px; 
+}
+
+.sector-block { 
+    border: 1px solid var(--border-color); 
+    background: #f3f4f6; 
+    aspect-ratio: 1; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: var(--font-mono); 
+    font-size: 9px; 
+    color: var(--text-muted); 
+}
+
+.sector-block.allocated { 
+    background: var(--accent-matrix); 
+    color: white; 
+    border-color: #047857; 
+}
